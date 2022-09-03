@@ -114,8 +114,10 @@ double Utils::evaluar(std::vector<Monomio> polinomio, double valor) {
 double Utils::derivada(std::vector<Monomio> polinomio){
     std::vector<Monomio>::size_type i;
     for (i = 0; i < polinomio.size(); i++) {
+    	Monomio monomioaux;
         Monomio monomio = polinomio[i];
-        
+        monomio.SetCoeficiente(monomio.GetGrado()*monomio.GetCoeficiente());
+        monomio.SetGrado(monomio.GetGrado()*monomio.GetCoeficiente())-1;  
     }
 
 }
