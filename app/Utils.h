@@ -49,7 +49,8 @@ std::vector<Monomio> convertir(std::string polinomioStr);
  * @param value Elemento a evaluar
  * @return el valor resultante
  */
-double evaluar(std::vector<Monomio> polinomio, double value);
+double evaluar(std::vector<Monomio> polinomio, double value); 
+std::vector<Monomio> Utils::derivada(std::vector<Monomio> polinomio);
 } // namespace Utils
 
 #endif /* UTILS_H */
