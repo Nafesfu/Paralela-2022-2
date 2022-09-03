@@ -50,10 +50,23 @@ std::vector<Monomio> convertir(std::string polinomioStr);
  * @return el valor resultante
  */
 double evaluar(std::vector<Monomio> polinomio, double value); 
-
+/**
+*corregir las variables negativas ya que el programa las toma como 0x
+*/
 std::vector<Monomio> derivada(std::vector<Monomio> polinomio);
+/**
+*parametro Arreglo de polinomios
+*ciclo para derivar
+*retorna el plonomio derviado
+*/
 
 double newtonraphson(std::vector<Monomio> polinomio);
+/**
+*Constante x(n) inicial 
+*Parametro polinomio auxiliar
+*ciclo de iteraciones (50) a mas iteraciones, mes preciso el resultado
+*
+*/
 
 } // namespace Utils
 

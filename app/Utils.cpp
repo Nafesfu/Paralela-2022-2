@@ -133,7 +133,7 @@ double Utils::newtonraphson(std::vector<Monomio> polinomio){ //funcion newton ra
      double polinomioevaluado = evaluar(polinomio,n);
      double polinomioderivado = evaluar(polinomioaux,n);
      double aproximacion=polinomioevaluado/polinomioderivado;//operacion f(x)/f'(x)
-     while (i<=50){//iteramos 50 veces
+     while (i<=50){//iteramos 50 veces (mas veces=mas precision)
      	polinomioevaluado = evaluar(polinomio,n);
      	polinomioderivado = evaluar(polinomioaux,n);
      	aproximacion=polinomioevaluado/polinomioderivado;
@@ -142,52 +142,3 @@ double Utils::newtonraphson(std::vector<Monomio> polinomio){ //funcion newton ra
      	}
      return n;	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
