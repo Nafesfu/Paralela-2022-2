@@ -119,20 +119,21 @@ std::vector<Monomio> Utils::derivada(std::vector<Monomio> polinomio){
         Monomio monomio = polinomio[i];//de aqui sacamos los datos
         monomioaux.SetCoeficiente(monomio.GetGrado()*monomio.GetCoeficiente());//formula de la derivada para el coeficiente
         monomioaux.SetGrado(monomio.GetGrado()-1);//formula de la derivada para el grado  
-        resultado.pushback(monomioaux);//llevar los resultados del monomio al polinomio
+        resultado.push_back(monomioaux);//llevar los resultados del monomio al polinomio
     }
     return resultado;//retorna el resultado obviamente
 }
 	
 double Utils::newtonraphson(std::vector<Monomio> polinomio){ //funcion newton raphson
      double constante=8; //x(n) valor aleatorio para iterar
-     int i=0,double n=constante;
+     int i=0; 
+     double n=constante;
      std::vector<Monomio> polinomioaux;//Creamos un polinomio auxiliar
      polinomioaux = derivada(polinomio); 
      double polinomioevaluado = evaluar(polinomio,n);
      double polinomioderivado = evaluar(polinomioaux,n);
      double aproximacion=polinomioevaluado/polinomioderivado;//operacion f(x)/f'(x)
-     while (i<=5){//iteramos 5 veces
+     while (i<=50){//iteramos 50 veces
      	polinomioevaluado = evaluar(polinomio,n);
      	polinomioderivado = evaluar(polinomioaux,n);
      	aproximacion=polinomioevaluado/polinomioderivado;

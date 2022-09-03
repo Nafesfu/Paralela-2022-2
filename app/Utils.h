@@ -50,7 +50,11 @@ std::vector<Monomio> convertir(std::string polinomioStr);
  * @return el valor resultante
  */
 double evaluar(std::vector<Monomio> polinomio, double value); 
-std::vector<Monomio> Utils::derivada(std::vector<Monomio> polinomio);
+
+std::vector<Monomio> derivada(std::vector<Monomio> polinomio);
+
+double newtonraphson(std::vector<Monomio> polinomio);
+
 } // namespace Utils
 
 #endif /* UTILS_H */
