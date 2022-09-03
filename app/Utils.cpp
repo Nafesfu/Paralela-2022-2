@@ -116,8 +116,8 @@ double Utils::derivada(std::vector<Monomio> polinomio){
     for (i = 0; i < polinomio.size(); i++) {
     	Monomio monomioaux;
         Monomio monomio = polinomio[i];
-        monomio.SetCoeficiente(monomio.GetGrado()*monomio.GetCoeficiente());
-        monomio.SetGrado(monomio.GetGrado()*monomio.GetCoeficiente())-1;  
+        monomioaux.SetCoeficiente(monomio.GetGrado()*monomio.GetCoeficiente());
+        monomioaux.SetGrado(monomio.GetGrado()-1);  
     }
 
 }
